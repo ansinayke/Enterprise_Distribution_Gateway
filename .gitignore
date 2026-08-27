@@ -21,3 +21,6 @@ core-service/target/
 
 # Docker Volumes
 pgdata/
+
+#Report Files
+Report_Files/
