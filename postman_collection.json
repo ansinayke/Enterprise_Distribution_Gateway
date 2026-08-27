@@ -1,0 +1,222 @@
+{
+  "info": {
+    "name": "Enterprise Polyglot Microservices POC",
+    "description": "Postman collection to test the .NET API Gateway which proxies requests to the Spring Boot Core Service.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Shipment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"trackingNumber\": \"TRK-123456789\",\n    \"status\": \"PENDING\",\n    \"destination\": \"New York, NY\",\n    \"origin\": \"Los Angeles, CA\",\n    \"weight\": 45.5,\n    \"expectedDeliveryDate\": \"2026-09-01T12:00:00Z\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Shipments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Shipment By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Shipment Status",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"status\": \"SHIPPED\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments/1/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments",
+            "1",
+            "status"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Shipment Destination",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"destination\": \"Chicago, IL\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments/1/destination",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments",
+            "1",
+            "destination"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Shipment (Full)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"trackingNumber\": \"TRK-123456789\",\n    \"status\": \"SHIPPED\",\n    \"destination\": \"Chicago, IL\",\n    \"origin\": \"Los Angeles, CA\",\n    \"weight\": 45.5,\n    \"expectedDeliveryDate\": \"2026-09-01T12:00:00Z\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Patch Shipment (Partial Update)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"trackingNumber\": \"TRK-999999999\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Shipment",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/gateway/shipments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "gateway",
+            "shipments",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}

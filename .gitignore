@@ -1,0 +1,23 @@
+# IDE and OS
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.user
+
+# .NET / C#
+api-gateway/bin/
+api-gateway/obj/
+
+# Java / Maven / Spring Boot
+core-service/target/
+*.class
+*.log
+*.jar
+*.war
+
+# Environment Files
+.env
+
+# Docker Volumes
+pgdata/
