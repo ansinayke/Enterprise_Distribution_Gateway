@@ -1,11 +1,12 @@
 # Enterprise Distribution Gateway & Polyglot Microservices POC
 
-![Architecture Diagram](assets/banner.jpg)
 ![Architecture](https://img.shields.io/badge/Architecture-Microservices-blue)
 ![API Gateway](https://img.shields.io/badge/Gateway-.NET%208-512BD4?logo=dotnet)
 ![Core Service](https://img.shields.io/badge/Core%20Service-Spring%20Boot%203-6DB33F?logo=springboot)
 ![Database](https://img.shields.io/badge/Database-PostgreSQL%2016-336791?logo=postgresql)
 ![Containerization](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker)
+
+![Architecture Diagram](assets/banner.jpg)
 
 A Proof of Concept (POC) demonstrating a polyglot microservices architecture. This project showcases how an enterprise can seamlessly integrate different technology stacks by utilizing a lightweight **.NET 8 API Gateway** at the edge to route requests to a robust **Spring Boot / Java 21 Core Service** backed by a **PostgreSQL** database.
 
